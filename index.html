@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOMEWORK</title>
+     
+    <script type="module" crossorigin src="/developer-site-portfolio/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/developer-site-portfolio/assets/vendor-2cfd16ce.js">
+    <link rel="stylesheet" href="/developer-site-portfolio/assets/vendor-a51daae5.css">
+    <link rel="stylesheet" href="/developer-site-portfolio/assets/index-f8907fae.css">
+  </head>
+  <body>
+    <form class="search-form js-search-form">
+      <div class="form-group">
+        <label for="searchQuery"></label>
+        <input
+          type="text"
+          name="query"
+          class="form-control"
+          id="searchQuery"
+          placeholder="Search images..."
+          autocomplete="off"
+        />
+      </div>
+      <button type="submit" class="submit-btn">Search</button>
+    </form>
+     
+    <div class="gallery-container">
+      <ul class="images js-images-container"></ul>
+    </div>
+    <span class="loader hidden" role="status" aria-hidden="true"></span>
+    <button class="btn-show-more js-waiting-text hidden" aria-hidden="true"
+    >Load more images</button>
+  
+ 
+  </body>
+</html> 
