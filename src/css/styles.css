@@ -1,204 +1,92 @@
-/* Reset styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
+@import url('./reset.css');
+@import url('./header.css');
+@import url('./hero.css');
+@import url('./about-me.css');
+@import url('./benefits.css');
+@import url('./projects.css');
+@import url('./faq.css');
+@import url('./covers.css');
+@import url('./reviews.css');
+@import url('./work-together.css');
+@import url('./mobile-menu.css');
+
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('../font/InterTight-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
-
-p:last-child {
-  margin-bottom: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  color: currentColor;
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  /* height: auto; */
-  object-fit: cover;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  font-family: 'Inter Tight', sans-serif;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  color: #fafafa;
+  background-color: #1c1d20;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --background: #1c1d20;
+  --cards: #242527;
+  --arrow: #3b3b3b;
+  --button-text: #ed3b44;
+  --main-text: #fafafa;
 }
 
-* {
-  font-family: 'Montserrat';
+.section-indent {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
-.search-form {
+.container {
   display: flex;
-  justify-content: center;
-  gap: 8px;
   align-items: center;
-  padding-top: 30px;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 767px) {
+  .container {
+    min-width: 375px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
-.submit-btn {
-  background-color: #4e75ff;
-  color: white;
-  border-radius: 7px;
-  border: none;
-  padding: 8px 16px;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  transition: 0.4s;
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+  .section-indent {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 }
 
-.submit-btn:hover {
-  background: #6c8cff;
-}
-
-.form-control {
-  width: 240px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  border: 1px solid #808080;
-  transition: 0.4s;
-  outline: none;
-}
-
-.form-control:hover {
-  border: 1px solid #000;
-}
-
-.form-control:focus {
-  border: 1px solid #4e75ff;
-}
-
-.form-control::placeholder {
-  color: #808080;
-  font-size: 16px;
-  letter-spacing: 0.04em;
-}
-
-.gallery-container {
-  display: flex;
-  gap:  20px;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 15px;
-}
-
-.gallery-item {
-  width: 100%;
-  height: auto;
-  border: 1px solid #808080;
-}
-
-.images {
-  display: grid;
-  grid-template-columns: repeat(4, 300px);
-  grid-gap: 22px;
-}
-
-.text-content-box {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 30px;
-}
-
-.image-text {
-  font-size: 12px;
-  text-align: center;
-  font-weight: 400;
-}
-
-.image-title {
-  font-weight: 600;
-  font-size: 12px;
-  color: #2e2f42;
-}
-
-.iziToast-close {
-  color: white !important;
-}
- 
-.btn-show-more {
-    background-color: #4e75ff;
-    color: white;
-    border-radius: 7px;
-    border: 1px solid white;
-    padding: 8px 16px;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    transition: 0.4s;
-    display:  block;
-    margin: 0 auto;
-}
-.loader{
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: block;
-  margin:15px auto;
-  position: relative;
-  box-sizing: border-box;
-  animation: zeroRotation 1s linear infinite alternate;
-}
-
-.hidden{
-  display: none;
-}
-.loader::after,
-.loader::before {
-  content: '';  
-  box-sizing: border-box;
+.visually-hidden {
   position: absolute;
-  left: 0;
-  top: 0;
-  background: rgb(22, 155, 165);
-  width: 16px;
-  height: 16px;
-  transform: translate(-50%, 50%);
-  border-radius: 50%;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
-.loader::before {
-  left: auto;
-  right: 0;
-  transform: translate(50%, 100%);
+
+html {
+  scroll-behavior: smooth;
 }
-@keyframes zeroRotation {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-  100% {
-    transform: scale(0) rotate(360deg);
-  }
-} 
